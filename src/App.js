@@ -1,8 +1,8 @@
 import React, { useEffect, useReducer } from 'react'
-import Header from './Header'
-import Movie from './Movie'
-import Search from './Search'
-import '../App.css'
+import Header from './components/Header'
+import Movie from './components/Movie'
+import Search from './components/Search'
+import './App.css'
 
 const API_URL = process.env.REACT_APP_API_URL
 const API_KEY = process.env.REACT_APP_API_KEY
