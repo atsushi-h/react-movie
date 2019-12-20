@@ -1,2 +1,1 @@
-// 何もしないReducer
-export const noop = (state = {}) => state
+export { default as PopularMovie } from './PopularMovie'

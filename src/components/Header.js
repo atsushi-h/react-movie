@@ -1,10 +1,12 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const Header = props => {
   return (
-    <header className="App-header">
-      <h2>{props.text}</h2>
-    </header>
+    <ul>
+        <li><Link to="/">ホーム</Link></li>
+        <li><Link to="/mylist">マイリスト</Link></li>
+      </ul>
   )
 }
 
