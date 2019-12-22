@@ -7,6 +7,9 @@ export const addMovieToMylist = movie => ({
 })
 
 // Mylistから削除
-// export const deleteMovieToMylist = () => ({
-//   type: 'DELETE_MYLIST'
-// })
+export const deleteMovieToMylist = movie => ({
+  type: 'DELETE_MYLIST',
+  payload: {
+    movie
+  }
+})

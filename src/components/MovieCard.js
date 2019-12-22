@@ -1,5 +1,6 @@
 import React from 'react'
 import AddMylistBtn from '../containers/button/AddMylistBtn'
+import DeleteMylistBtn from '../containers/button/DeleteMylistBtn'
 
 const IMAGE_PATH = process.env.REACT_APP_IMAGE_PATH
 
@@ -13,7 +14,7 @@ const MovieCard = ({ movie, route }) => {
       <img src={posterPath} alt={movie.title}></img>
       <p>{movie.overview}</p>
       {route === '/mylist'
-      ? <p>delete btn</p>
+      ? <DeleteMylistBtn movie={movie}/>
       : <AddMylistBtn movie={movie}/>
       }
     </>
