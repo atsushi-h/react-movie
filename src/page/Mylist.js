@@ -1,12 +1,10 @@
 import React from 'react'
+import Mylist from '../containers/Mylist'
 
-
-const Mylist = () => {
+const Mylists = () => {
   return(
-    <div>
-      mylist
-    </div>
+    <Mylist />
   )
 }
 
-export default Mylist
+export default Mylists

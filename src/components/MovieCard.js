@@ -1,15 +1,21 @@
 import React from 'react'
+import AddMylistBtn from '../containers/button/AddMylistBtn'
 
 const IMAGE_PATH = process.env.REACT_APP_IMAGE_PATH
 
-const MovieCard = ({ title, poster_path, overview }) => {
-  const posterPath = IMAGE_PATH + poster_path
+const MovieCard = ({ movie, route }) => {
+  const posterPath = IMAGE_PATH + movie.poster_path
+  // console.log(route)
 
   return (
     <>
-      <h2>{title}</h2>
-      <img src={posterPath} alt={title}></img>
-      <p>{overview}</p>
+      <h2>{movie.title}</h2>
+      <img src={posterPath} alt={movie.title}></img>
+      <p>{movie.overview}</p>
+      {route === '/mylist'
+      ? <p>delete btn</p>
+      : <AddMylistBtn movie={movie}/>
+      }
     </>
   )
 }

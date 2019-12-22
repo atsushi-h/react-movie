@@ -10,9 +10,8 @@ const PopularMovie = props => {
     return (
       <MovieCard
         key={movie.id}
-        title={movie.title}
-        overview={movie.overview}
-        poster_path={movie.poster_path}
+        movie={movie}
+        route={props.route.pathname}
       />
     )
   })

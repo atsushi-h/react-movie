@@ -3,7 +3,8 @@ import PopularMovie from '../components/PopularMovie'
 import * as actions from '../actions/PopularMovie'
 
 const mapStateToProps = state => ({
-  popularMovies: state.PopularMovie
+  popularMovies: state.PopularMovie,
+  route: state.router.location
 })
 
 const mapDispatchToProps = dispatch => ({
