@@ -18,7 +18,15 @@ const PopularMovie = props => {
 
   return (
     <>
-      {movieList}
+      {
+        props.popularMovies.isLoading && !props.popularMovies.error ? (
+          <span>loading...</span>
+        ) : props.popularMovies.error ? (
+          <span>Error!!</span>
+        ) : (
+          movieList
+        )
+      }
     </>
   )
 }
