@@ -1,21 +1,27 @@
 import React from 'react'
 import MovieCard from '../containers/MovieCard'
 
-const Mylist = props => {
+const Mylist = ({ Mylist, route }) => {
 
-  const mylist = props.Mylist.movies.map(movie => {
+  const mylist = Mylist.movies.map(movie => {
     return (
       <MovieCard
         key={movie.id}
         movie={movie}
-        route={props.route.pathname}
+        route={route.pathname}
       />
     )
   })
 
   return (
     <>
-      {mylist}
+      {
+        Mylist.movies.length ? (
+          mylist
+        ) : (
+          <span>There is no Mylist</span>
+        )
+      }
     </>
   )
 }
