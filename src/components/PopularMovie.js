@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import MovieCard from './MovieCard'
+import MovieCard from '../containers/MovieCard'
 
 const PopularMovie = props => {
   useEffect(() => {
