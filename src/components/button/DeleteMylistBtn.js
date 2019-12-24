@@ -1,9 +1,15 @@
 import React from 'react'
+import Button from '@material-ui/core/Button'
 
 const DeleteMylistBtn = props => {
-
   return (
-    <button onClick={() => props.deleteMylist(props.movie)}>DELETE MYLIST</button>
+    <Button
+      variant="contained"
+      color="secondary"
+      onClick={() => props.deleteMylist(props.movie)}
+    >
+      DELETE
+    </Button>
   )
 }
 
