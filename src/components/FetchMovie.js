@@ -3,6 +3,7 @@ import { makeStyles } from '@material-ui/core/styles'
 import Grid from '@material-ui/core/Grid'
 import CircularProgress from '@material-ui/core/CircularProgress'
 import MovieCard from '../containers/MovieCard'
+import Search from './Search'
 
 
 const useStyles = makeStyles(theme => ({
@@ -39,6 +40,7 @@ const FetchMovie = ({ movies, route, fetchMovies }) => {
 
   return (
     <>
+      <Search search={fetchMovies}/>
       {
         movies.isLoading && !movies.error ? (
           <CircularProgress />
