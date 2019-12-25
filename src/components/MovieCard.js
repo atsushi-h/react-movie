@@ -16,12 +16,12 @@ const useStyles = makeStyles(theme => ({
   card: {
     maxWidth: 600,
     marginBottom: theme.spacing(5),
-    [theme.breakpoints.down('sm')] : {
+    [theme.breakpoints.down('xs')] : {
       padding: "20px 0"
     }
   },
   container: {
-    [theme.breakpoints.down('sm')] : {
+    [theme.breakpoints.down('xs')] : {
       justifyContent: "center"
     }
   },
