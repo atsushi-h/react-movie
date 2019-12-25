@@ -57,7 +57,7 @@ const MovieCard = ({ movie, route, Mylist }) => {
             <Typography className={classes.title} variant="subtitle1" gutterBottom>
               {movie.title}
             </Typography>
-            <Typography variant="p">
+            <Typography variant="caption">
               {movie.overview}
             </Typography>
           </CardContent>
