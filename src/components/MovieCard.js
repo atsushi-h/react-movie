@@ -14,13 +14,15 @@ const IMAGE_PATH = process.env.REACT_APP_IMAGE_PATH
 
 const useStyles = makeStyles(theme => ({
   card: {
-    maxWidth: 600,
+    width: 600,
     marginBottom: theme.spacing(5),
     [theme.breakpoints.down('xs')] : {
+      width: "auto",
       padding: "20px 0"
     }
   },
   container: {
+    alignItems: "center",
     [theme.breakpoints.down('xs')] : {
       justifyContent: "center"
     }
@@ -39,7 +41,11 @@ const useStyles = makeStyles(theme => ({
 
 const MovieCard = ({ movie, route, Mylist }) => {
   const classes = useStyles()
+
+  // 映画のポスター画像のURL
   const posterPath = IMAGE_PATH + movie.poster_path
+
+  // マイリストに登録されているかどうか
   const isRegistared = Mylist.movies.includes(movie)
 
   return (
