@@ -8,8 +8,8 @@ const mapStateToProps = state => ({
 })
 
 const mapDispatchToProps = dispatch => ({
-  fetchMovies(input, noSearch) {
-    dispatch(actions.fetchMovies(input, noSearch))
+  fetchMovies(input) {
+    dispatch(actions.fetchMovies(input))
   }
 })
 
