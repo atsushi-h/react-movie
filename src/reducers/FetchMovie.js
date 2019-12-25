@@ -1,5 +1,5 @@
 const initialState = {
-  popularMovies: [],
+  movies: [],
   isLoading: false,
   error: false
 }
@@ -20,7 +20,7 @@ export default (state = initialState, action) => {
         ? { ...state, error: true }
         : {
           ...state,
-          popularMovies: action.payload.response
+          movies: action.payload.response
         }
 
     // リクエスト終了

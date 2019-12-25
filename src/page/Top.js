@@ -1,5 +1,5 @@
 import React from 'react'
-import PopularMovie from '../containers/PopularMovie'
+import FetchMovie from '../containers/FetchMovie'
 import { makeStyles } from '@material-ui/core/styles'
 import Container from '@material-ui/core/Container'
 
@@ -14,7 +14,7 @@ const Top = () => {
 
   return (
     <Container maxWidth="lg" className={classes.container}>
-      <PopularMovie />
+      <FetchMovie />
     </Container>
   )
 }

@@ -18,14 +18,14 @@ const useStyles = makeStyles(theme => ({
   }
 }))
 
-const PopularMovie = ({ popularMovies, route, onMount }) => {
+const FetchMovie = ({ movies, route, fetchMovies }) => {
   const classes = useStyles()
 
   useEffect(() => {
-    onMount()
+    fetchMovies()
   }, [])
 
-  const movieList = popularMovies.popularMovies.map(movie => {
+  const movieList = movies.movies.map(movie => {
     return (
       <Grid item lg={6} className={classes.item}>
         <MovieCard
@@ -40,9 +40,9 @@ const PopularMovie = ({ popularMovies, route, onMount }) => {
   return (
     <>
       {
-        popularMovies.isLoading && !popularMovies.error ? (
+        movies.isLoading && !movies.error ? (
           <CircularProgress />
-        ) : popularMovies.error ? (
+        ) : movies.error ? (
           <span>Error!!</span>
         ) : (
           <Grid container className={classes.container}>
@@ -54,4 +54,4 @@ const PopularMovie = ({ popularMovies, route, onMount }) => {
   )
 }
 
-export default PopularMovie
+export default FetchMovie

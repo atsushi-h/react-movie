@@ -1,7 +1,8 @@
 import axios from 'axios'
 
-const API_URL_POPULAR_MOVIE = process.env.REACT_APP_API_URL + 'popular'
 const API_KEY = process.env.REACT_APP_API_KEY
+const API_URL = process.env.REACT_APP_API_URL
+const API_URL_POPULAR_MOVIE = API_URL + 'popular'
 
 // リクエスト開始
 const startRequest = () => ({
@@ -29,7 +30,7 @@ const finishRequest = () => ({
 })
 
 // 非同期通信
-export const fetchPopularMovie = () => {
+export const fetchMovies = () => {
   return async (dispatch) => {
     dispatch(startRequest())
     try {
